@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.*;
 
 public class Main {
@@ -266,7 +267,45 @@ public class Main {
         // System.out.println(examScores.size());
         // System.out.println(examScores.get("English"));
         // System.out.println(examScores.containsValue(95));
+
 */
+        //////////////////*******> Object Oriented Programming <*********//////////////////////
+/*
+        User youngerUser = new User();
+
+        youngerUser.name = "Mohammad Farid Uzzaman";
+        youngerUser.birthDay = LocalDate.parse("2015-01-31");
+
+
+        User olderUser = new User();
+
+        olderUser.name = "Zaman";
+        olderUser.birthDay = LocalDate.parse("1975-01-23");
+
+        System.out.printf("%s was born back in %s, and he is now %d years old. \n", youngerUser.name, youngerUser.birthDay.toString(), youngerUser.age());
+
+        System.out.printf("%s was born back in %s, and he is now %d years old .", olderUser.name, olderUser.birthDay.toString(), olderUser.age());
+
+        */
+
+        User user = new User();
+
+        user.name = "Mohammad Farid Uzzaman";
+        user.birthDay = LocalDate.parse("2015-01-31");
+
+        Book book = new Book();
+
+        book.title = "Harry Potter";
+        book.author = "J.K. Rowling";
+
+        user.borrow(book);
+
+
+
+
+        System.out.printf("%s was born back in %s, and he is now %d years old. \n", user.name, user.birthDay.toString(), user.age());
+
+        System.out.printf("%s has borrow these books: %s \n", user.name, user.books.toString());
 
     }
 }

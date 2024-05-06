@@ -1,5 +1,4 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,7 +31,7 @@ public class Main {
         System.out.printf(String.valueOf(name.length()));
         System.out.printf(String.valueOf(name.isEmpty()));
         System.out.printf(String.valueOf(name.toUpperCase()));
-        System.out.printf(String.format("Hello there! I am %s. I am a %s. I am %d years old.", name, job, age));
+        System.out.printf(String.format("Hello there! I am %s. I am an %s. I am %d years old.", name, job, age));
         System.out.printf("Hello there! I am " + name + ". I am a " + job + ".");
         System.out.printf("This is the copyright symbol:  " +  copyrightSymbol + name);
 */
@@ -70,7 +69,7 @@ public class Main {
         scanner.nextLine();
 
 
-        System.out.print("What operation do you want perform:  ");
+        System.out.print("What operation do you want to perform:  ");
         String operation = scanner.nextLine();
 
         if( operation.equals("sum")){
@@ -102,7 +101,7 @@ public class Main {
         scanner.nextLine();
 
 
-        System.out.print("What operation do you want perform:  ");
+        System.out.print("What operation do you want to perform:  ");
         String operation = scanner.nextLine();
 
         switch (operation){
@@ -130,7 +129,7 @@ public class Main {
 
         */
         //////////////////*******> Arrays <*********//////////////////////
-
+/*
      char[] vowels = new char[5];
 
      vowels[0] = 'a';
@@ -139,11 +138,135 @@ public class Main {
      vowels[3] = 'o';
      vowels[4] = 'u';
 
-        System.out.println(vowels[2]);
-        System.out.println(Arrays.toString(vowels));
+        //System.out.println(vowels[2]);
+        //System.out.println(Arrays.toString(vowels));
 
-        char[] vow = {'a', 'e', 'i', 'o', 'u'};
+        char[] vow = { 'o', 'i','a', 'e', 'u'};
+
+
+        Arrays.sort(vow);
         System.out.println(Arrays.toString(vow));
+
+        //System.out.println(vow.length);
+*/
+
+        //////////////////*******> Arrays <*********//////////////////////
+/*
+        int[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12};
+
+        int sum = 0;
+
+        for(int index = 0; index < numbers.length; index++) {
+
+            sum += numbers[index];
+            System.out.println(numbers[index]);
+        }
+        System.out.printf(String.valueOf(sum));
+
+        */
+/*
+        int number = 5;
+        for( int multiplier = 1; multiplier <= 10; multiplier++) {
+            System.out.printf("%d * %d = %d \n", number, multiplier, number* multiplier);
+
+        }
+
+ */
+        /*
+         for( int number = 1; number <= 10; number++) {
+             for( int multiplier = 1; multiplier <= 10; multiplier++) {
+                 System.out.printf("%d * %d = %d \n", number, multiplier, number* multiplier);
+
+             }
+         }
+
+         */
+
+        //////////////////*******> While loop <*********//////////////////////
+/*
+        int number =  5;
+        int multiplier = 1;
+
+        while (multiplier <= 10){
+            System.out.printf("%d X %d = %d  \n", number, multiplier, number* multiplier);
+            multiplier++;
+        }
+
+
+        do{
+            System.out.printf("%d X %d = %d  \n", number, multiplier, number* multiplier);
+            multiplier++;
+        } while (multiplier <= 10);
+*/
+
+
+
+        //////////////////*******> ArrayList <*********//////////////////////
+         /*
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+
+        numbers.add(1);  //0 Index
+        numbers.add(4);  //1
+        numbers.add(15); //2
+        numbers.add(23); //3
+        numbers.add(24); //4
+        numbers.add(25); //5
+
+        System.out.println("before" + numbers.toString());
+        */
+        /*
+        numbers.forEach( number -> {
+            System.out.println(number * 2);
+        });
+        */
+
+        /*
+        numbers.forEach( number -> {
+           numbers.set(numbers.indexOf(number), number * 2);
+        });
+
+
+
+        System.out.println("after" + numbers.toString());
+
+        /*
+        numbers.set(3, 30);  // By Index Set value
+        numbers.remove(2); // Remove by Index
+        numbers.remove(Integer.valueOf(4)); // Remove by value
+       // numbers.sort(Comparator.naturalOrder());
+        numbers.sort(Comparator.reverseOrder());
+
+
+        System.out.println(numbers.get(3));
+        System.out.println(numbers.toString());
+        System.out.println(numbers.contains(1));
+        System.out.println(numbers.size());
+
+        */
+
+        //////////////////*******> Hashmap <*********//////////////////////
+/*
+        HashMap<String, Integer> examScores = new HashMap<String, Integer>();
+
+        examScores.put("Math", 75);
+        examScores.put("Sociology", 85);
+        examScores.put("English", 95);
+
+        // examScores.replace("Math", 65);
+
+        // examScores.clear();
+        // examScores.remove("Math");
+
+        examScores.forEach((subject, score) -> {
+            System.out.println(subject + " - " + score);
+        });
+
+        // System.out.println(examScores.toString());
+        // System.out.println(examScores.size());
+        // System.out.println(examScores.get("English"));
+        // System.out.println(examScores.containsValue(95));
+*/
 
     }
 }

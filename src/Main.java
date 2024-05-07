@@ -288,24 +288,15 @@ public class Main {
 
         */
 
-        User user = new User();
+        User user = new User("Mohammad Farid Uzzaman","2015-01-31");
 
-        user.name = "Mohammad Farid Uzzaman";
-        user.birthDay = LocalDate.parse("2015-01-31");
-
-        Book book = new Book();
-
-        book.title = "Harry Potter";
-        book.author = "J.K. Rowling";
+        Book book = new Book("Harry Potter", "J.K. Rowling");
 
         user.borrow(book);
 
+        System.out.printf("%s was born back in %s, and he is now %d years old. \n", user.getName(), user.getBirthDay(), user.age());
 
-
-
-        System.out.printf("%s was born back in %s, and he is now %d years old. \n", user.name, user.birthDay.toString(), user.age());
-
-        System.out.printf("%s has borrow these books: %s \n", user.name, user.books.toString());
+        System.out.printf("%s has borrow these books: %s \n", user.getName(), user.borrowBooks());
 
     }
 }

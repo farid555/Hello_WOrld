@@ -290,13 +290,15 @@ public class Main {
 
         User user = new User("Mohammad Farid Uzzaman","2015-01-31");
 
-        Book book = new Book("Harry Potter", "J.K. Rowling");
+        Book book = new Book("Harry Potter", "J.K. Rowling", 230);
 
-        user.borrow(book);
+        AudioBook dracula = new AudioBook("Dracula", "Bram Stoker", 30000);
 
-        System.out.printf("%s was born back in %s, and he is now %d years old. \n", user.getName(), user.getBirthDay(), user.age());
+        Ebook jeeves = new Ebook("Carry on Jeeves", "P.G. Wodehouse", 280, "PDF");
 
-        System.out.printf("%s has borrow these books: %s \n", user.getName(), user.borrowBooks());
+        System.out.println(jeeves.toString());
+
+
 
     }
 }
